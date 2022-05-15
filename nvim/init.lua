@@ -1,8 +1,10 @@
 -- PRE-PLUGIN CONFIG
 vim.opt.termguicolors = true
+vim.opt.timeoutlen = 300
 --REQUIRE
 require('plugins')
 require('impatient')
+require('keybindings')
 
 --GENERAL POST-PLUGIN CONFIG
 -- colorscheme

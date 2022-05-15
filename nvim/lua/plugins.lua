@@ -13,7 +13,7 @@ require('packer').startup(function(use)
   
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   
-  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+  use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
 
   use 'goolord/alpha-nvim'
 
@@ -23,20 +23,24 @@ require('packer').startup(function(use)
 
   use 'windwp/nvim-autopairs'
   
+  use 'neovim/nvim-lspconfig'
+  
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp' 
+  
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
 
-  -- MAYBE:
-  --use 'kyazdani42/nvim-tree.lua' --configured
-  --use 'folke/trouble.nvim'
-  --use 'neovim/nvim-lspconfig'
-  --use 'hrsh7th/cmp-nvim-lsp'
-  --use 'hrsh7th/cmp-buffer'
-  --use 'hrsh7th/cmp-path'
-  --use 'hrsh7th/cmp-cmdline'
-  --use 'hrsh7th/nvim-cmp' 
-  --use 'hrsh7th/LuaSnip'
-  --use 'hrsh7th/cmp_luansip'
-  --use 'mfussenegger/nvim-jdtls'
-  --use 'folke/lsp-colors.nvim' --configured
+  use 'folke/which-key.nvim'
+  
+  use 'folke/lsp-colors.nvim'
+
+  use {'kyazdani42/nvim-tree.lua',requires = {'kyazdani42/nvim-web-devicons',},tag = 'nightly'}
+
+  use 'folke/trouble.nvim'
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
